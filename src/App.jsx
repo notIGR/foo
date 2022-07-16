@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DisplayIdea from "./compenets/displayIdeas";
+import IdeasForm from "./compenets/ideasFrom";
 
 
 function App() {
@@ -9,16 +10,21 @@ function App() {
     "Horror film where AWS goes down for 24 hours"
   ]);
 
-
+const addIdeas = (newIdeas) => {
+  setIdeas([...ideas, newIdeas])
+}
 
   return (
     <main>
       <h1>Welcome, Super Awesome Movie Monster Think Tank!</h1>
+
       <DisplayIdea ideas={ ideas } />
+
       <br />
       
       <h1>Submit your ideas down below:</h1>
-
+      
+      <IdeasForm addIdeas={ addIdeas } />
 
     </main>
   );
