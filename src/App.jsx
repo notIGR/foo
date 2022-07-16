@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import DisplayIdea from "./compenets/displayIdeas";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   return (
     <main>
       <h1>Welcome, Super Awesome Movie Monster Think Tank!</h1>
-
+      <DisplayIdea ideas={ ideas } />
       <br />
       
       <h1>Submit your ideas down below:</h1>
